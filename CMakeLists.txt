@@ -39,14 +39,16 @@ set( SRCFILES ${CMAKE_CURRENT_SOURCE_DIR}/src/bcrypt.c
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/include/bcrypt)
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library( ${PROJECT_NAME} SHARED ${SRCFILES})
+#add_library( ${PROJECT_NAME} SHARED ${SRCFILES})
+add_library( ${PROJECT_NAME} STATIC ${SRCFILES})
 
 add_executable( ${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 target_link_libraries( ${PROJECT_NAME}_test ${PROJECT_NAME})
 
 install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION lib
-  LIBRARY DESTINATION lib)
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
 
