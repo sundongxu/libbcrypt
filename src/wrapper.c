@@ -40,10 +40,10 @@
 #if defined(__GLIBC__) && defined(_LIBC)
 #define __SKIP_GNU
 #endif
-#include "ow-crypt.h"
+#include "include/bcrypt/ow-crypt.h"
 
-#include "crypt_blowfish.h"
-#include "crypt_gensalt.h"
+#include "include/bcrypt/crypt_blowfish.h"
+#include "include/bcrypt/crypt_gensalt.h"
 
 #if defined(__GLIBC__) && defined(_LIBC)
 /* crypt.h from glibc-crypt-2.1 will define struct crypt_data for us */

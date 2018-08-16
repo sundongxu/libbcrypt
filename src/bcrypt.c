@@ -18,8 +18,8 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "bcrypt.h"
-#include "ow-crypt.h"
+#include "include/bcrypt/bcrypt.h"
+#include "include/bcrypt/ow-crypt.h"
 
 #define RANDBYTES (16)
 
